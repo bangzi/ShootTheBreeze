@@ -1,0 +1,51 @@
+.flex-wrp {
+  margin-left: 10px;
+}
+
+.username-view {
+  display: flex;
+  margin-top: 12px;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  background-color: #dadada;
+}
+
+.carddescribe {
+  margin-top: 8px;
+}
+
+.profession {
+  margin-top: 20px;
+}
+
+.userimage {
+  border-radius: 50%;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 2rpx;
+  margin-top: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.concernButtn {
+  display: flex;
+  margin-top: 40px;
+
+ justify-content:center;
+
+}
+
+.concern {
+  background-color: lightgreen;
+
+
+}
