@@ -10,7 +10,8 @@
         "pages/feedback/feedback",
         "pages/companyLogo/companyLogo",
         "pages/otherCard/otherCard",
-        "pages/concernPage/concernPage"
+        "pages/concernPage/concernPage",
+        "pages/sendVoice/sendVoice"
     ],
     "window": {
         "backgroundTextStyle": "light",

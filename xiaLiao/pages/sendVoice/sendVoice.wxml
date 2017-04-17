@@ -1,0 +1,5 @@
+<view >
+   <button bindtap="clickEventHandle">点击录音</button>
+   <button bindtap="clickEventHandleStopVoice">点击停止语音</button>
+   <button bindtap="clickEventHandlePlayVoice">点击播放语音</button>
+</view>

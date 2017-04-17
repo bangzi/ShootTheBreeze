@@ -6,14 +6,14 @@ Page({
     windowHeight: "800px",
     userListInfo: [{
       icon: '../../images/iconfont-dingdan.png',
-      text: '我的名片',
-      url: "../../pages/card/card",
+      text: '发语音动态',
+      url: "../../pages/sendVoice/sendVoice",
       isunread: false,
       unreadNum: 0,
       isOpen: false
     }, {
       icon: '../../images/iconfont-dingdan.png',
-      text: '添加logo',
+      text: '我的语音',
       url: "../../pages/companyLogo/companyLogo",
       isOpen: false
     }, {
