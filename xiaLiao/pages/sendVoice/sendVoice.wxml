@@ -1,5 +1,8 @@
 <view >
-   <button bindtap="clickEventHandle">点击录音</button>
-   <button bindtap="clickEventHandleStopVoice">点击停止语音</button>
-   <button bindtap="clickEventHandlePlayVoice">点击播放语音</button>
+   <view wx:if="{{voiceSecond != 0}}" class="voiceView" style="width:{{voiceViewWidth}}px">
+       <button bindtap="clickEventHandlePlayVoice" style="width:{{voiceWidth}}px" class="playVoice"></button>
+       <view class="voiceCountText">{{voiceSecond}}"</view>
+   </view>
+   <button wx:if="{{!recordStatus}}" bindtap="clickEventHandleStartVoice" class="recordButton" style="background-color:orangered" id="0">开始录音</button>
+   <button wx:if="{{recordStatus}}" bindtap="clickEventHandleStartVoice" class="recordButton" style="background-color:greenyellow" id="1">停止录音</button>
 </view>

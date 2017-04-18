@@ -1,0 +1,21 @@
+
+.recordButton {
+    flex-direction: column;
+    margin-top: 220px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    /*background-color: greenyellow;*/
+    /*font-size: 12pt;*/
+}
+
+.voiceView {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 20px;
+    height: 25px;
+}
+
+.playVoice {
+    margin-left: 0px;
+}
