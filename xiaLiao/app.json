@@ -11,7 +11,9 @@
         "pages/companyLogo/companyLogo",
         "pages/otherCard/otherCard",
         "pages/concernPage/concernPage",
-        "pages/sendVoice/sendVoice"
+        "pages/sendVoice/sendVoice",
+        "pages/voiceDetails/voiceDetails"
+
     ],
     "window": {
         "backgroundTextStyle": "light",
