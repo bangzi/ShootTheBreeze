@@ -3,19 +3,26 @@ var app = getApp()
 var common = require('../../utils/common.js').userInfo()
 Page({
     data: {
-        arr_res: {},
+        arr_res: [],
         request_fail: false,
         isconcern:0,
+        url:"../../pages/voiceDetails/voiceDetails",
         logoImageUrl: app.globalData.globalImageUrl,
     },
     onLoad: function (options) {
         // this.setData({
         //     title:options.name
         // })
+        wx.setNavigationBarTitle({
+          title: options.username+'的语音动态',
+          success: function(res) {
+            // success
+          }
+        })
         console.log(options.isconcern);
         console.log(options);
         this.setData({
-            arr_res: {
+            arr_res: [{
                 address: options.address,
                 company: options.company,
                 faxnumber: options.faxnumber,
@@ -30,7 +37,22 @@ Page({
                 wechatnumber: options.wechatnumber,
                 companylogo: options.companylogo,
                 cardid:options.cardid
-            },
+            },{
+                address: options.address,
+                company: options.company,
+                faxnumber: options.faxnumber,
+                icon: options.icon,
+                mail: options.mail,
+                phonenumber: options.phonenumber,
+                profession: options.profession,
+                qqnumber: options.qqnumber,
+                telephonenumber: options.telephonenumber,
+                username: options.username,
+                website: options.website,
+                wechatnumber: options.wechatnumber,
+                companylogo: options.companylogo,
+                cardid:options.cardid
+            }],
              isconcern:parseInt(options.isconcern)
         })
     },
