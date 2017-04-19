@@ -8,7 +8,6 @@ Page({
     voiceWidth: 0,
     voiceSecond: 0,
     voiceViewWidth: 0,
-    isShowVoiceView:false,
   },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
@@ -71,7 +70,6 @@ Page({
                       tempFilePath: res.tempFilePath,
                       voiceWidth: (count * 200 / 60),
                       voiceViewWidth: (count * 200 / 60 + 20),
-                      isShowVoiceView: true,
                       voiceSecond: count,
                   })
               },
@@ -108,10 +106,22 @@ Page({
       })
   },
 
-  //点击取消录音
-  clickEventHandleStopVoice: function() {
-      //结束录音  
-      wx.stopRecord()
+  //取消发表
+  cancelButtonEventHandle: function(e) {
+      var that = this;
+      wx.stopVoice();
+      that.setData ({
+          tempFilePath: '',
+          voiceWidth: 0,
+          voiceViewWidth: 0,
+          voiceSecond: 0,
+      })
+  },
+ 
+  //发表
+  publishButtonEventHandle: function(e) {
+      var that = this;
+      wx.stopVoice();
   }
 
 })

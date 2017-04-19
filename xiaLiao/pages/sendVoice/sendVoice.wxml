@@ -5,4 +5,8 @@
    </view>
    <button wx:if="{{!recordStatus}}" bindtap="clickEventHandleStartVoice" class="recordButton" style="background-color:orangered" id="0">开始录音</button>
    <button wx:if="{{recordStatus}}" bindtap="clickEventHandleStartVoice" class="recordButton" style="background-color:greenyellow" id="1">停止录音</button>
+   <view class="buttonView">
+       <button class="cancelButton" bindtap="cancelButtonEventHandle">取消发表</button>
+       <button class="publishButton" bindtap="publishButtonEventHandle">发表</button>
+   </view>
 </view>
