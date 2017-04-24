@@ -12,7 +12,8 @@
         "pages/otherCard/otherCard",
         "pages/concernPage/concernPage",
         "pages/sendVoice/sendVoice",
-        "pages/voiceDetails/voiceDetails"
+        "pages/voiceDetails/voiceDetails",
+        "pages/record/index"
 
     ],
     "window": {
