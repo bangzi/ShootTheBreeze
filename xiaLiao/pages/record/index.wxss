@@ -1,6 +1,6 @@
 /**index.wxss**/
 .speak-style{
-    position: relative;
+    position: fixed;
     height: 240rpx;
     width: 240rpx;
     border-radius: 20rpx;
