@@ -13,7 +13,7 @@
         "pages/concernPage/concernPage",
         "pages/sendVoice/sendVoice",
         "pages/voiceDetails/voiceDetails",
-        "pages/record/index"
+        "pages/record/record"
 
     ],
     "window": {
