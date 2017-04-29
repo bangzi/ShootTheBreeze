@@ -8,6 +8,7 @@ Page({
     voiceWidth: 0,
     voiceSecond: 0,
     voiceViewWidth: 0,
+    j:1,
   },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
@@ -52,6 +53,7 @@ Page({
       var intervarID;
       var count = 0;
       console.log(e);
+       speaking.call(this);
       if(e.currentTarget.id == 0) {
           intervarID = setInterval(function () {
               console.log('一秒执行一次', count);
@@ -125,3 +127,16 @@ Page({
   }
 
 })
+
+function speaking() {
+  var that = this;
+  //话筒帧动画
+  var i = 1;
+  this.timer = setInterval(function () {
+    i++;
+    i = i % 5;
+    that.setData({
+      j: i
+    })
+  }, 200)
+  }

@@ -18,6 +18,8 @@
 
 .playVoice {
     margin-left: 0px;
+    height: 40px;
+    width: voiceSecond px;
 }
 
 .buttonView {
@@ -29,9 +31,27 @@
 .cancelButton {
     margin-left: 30px;
     width: 120px;
+     marker-end: 10px;
+}
+.speak-style{
+    position: relative;
+   width: 50px;
+   height: 80px;
+   margin-left: 170px;
+   margin-top: 10px;
+   border-radius:25px; 
+    background: #26A5FF;
+}
+.sound-style{
+  position: absolute;
+  width: 74rpx;
+  height:150rpx;
+  margin-top: 0rpx;
+  margin-left: 16rpx;
 }
 
 .publishButton {
     margin-right: 30px;
     width: 120px;
+    marker-end: 10px;
 }

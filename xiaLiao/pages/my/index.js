@@ -14,7 +14,7 @@ Page({
     }, {
       icon: '../../images/iconfont-dingdan.png',
       text: '我的语音',
-      url: "../../pages/record/index",
+      url: "../../pages/record/record",
       isOpen: false
     }, {
       icon: '../../images/iconfont-card.png',
