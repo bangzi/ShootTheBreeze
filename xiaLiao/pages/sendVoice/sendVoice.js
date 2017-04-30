@@ -8,6 +8,7 @@ Page({
     voiceWidth: 0,
     voiceSecond: 0,
     voiceViewWidth: 0,
+    playStatus:false,
     j:1,
   },
   onLoad:function(options){
@@ -101,6 +102,12 @@ Page({
   //点击播放录音
   clickEventHandlePlayVoice: function() {
       console.log('录音的结果路径：', this.data.tempFilePath);
+      
+      reading.call(this);
+      this.setData({
+          playStatus:true
+      })
+
       wx.playVoice({
           filePath: this.data.tempFilePath,
           complete: function () {
@@ -138,5 +145,18 @@ function speaking() {
     that.setData({
       j: i
     })
+  }, 200)
+  }
+  function reading() {
+  var that = this;
+  //话筒帧动画
+  var i = 0;
+  this.timer = setInterval(function () {
+   
+    i = i % 5;
+     i++;
+    // that.setData({
+    //   j: i
+    // })
   }, 200)
   }

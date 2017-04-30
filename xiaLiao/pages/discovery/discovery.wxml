@@ -25,7 +25,12 @@
           <image class="img" mode="aspectFill" src="{{logoImageUrl+item.icon}}" />
           <view class="text">
             <text class="title">{{item.username}}</text>
-            <text class="subtitle">{{item.company}}</text>
+
+            <!--<text class="subtitle">{{item.company}}</text>-->
+            <view class="subtitle">
+              <import src="../../utils/playVoice.wxml" />
+              <template is="playVoice" />
+            </view>
           </view>
         </view>
         <view class="bottomLine"></view>

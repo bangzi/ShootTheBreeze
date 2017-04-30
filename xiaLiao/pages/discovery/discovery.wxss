@@ -70,9 +70,11 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  /*font-size: 18px;*/
   margin-top: 10px;
-  color: #999;
+  width: 20px;
+  height: 25px;
+  /*color: #999;*/
 }
 
 .concern {
@@ -95,6 +97,11 @@
   width: 1000px;
   top: -30px;
   background-color: #dadada;
+}
+
+.imagePlay{
+  width: 20px;
+  height: 25px;
 }
 
 .view-request-fail {

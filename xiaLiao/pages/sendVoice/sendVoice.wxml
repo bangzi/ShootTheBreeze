@@ -1,6 +1,13 @@
 <view >
    <view wx:if="{{voiceSecond != 0}}" class="voiceView" style="width:{{voiceViewWidth}}px">
-       <button bindtap="clickEventHandlePlayVoice" size="width:{{voiceWidth}}px" class="playVoice"></button>
+       <button bindtap="clickEventHandlePlayVoice" size="width:{{voiceWidth}}px" class="playVoice">
+        <view wx:if="{{playStatus}}" class="play-style">
+          <image class="playImage" mode = "aspectFit"src="../../images/mqz_icon_voicefeeds_wave0@2x.png"></image>
+          <image wx:if="{{j==2}}" class="playImage"mode = "aspectFit" src="../../images/mqz_icon_voicefeeds_wave1@2x.png"></image>
+          <image wx:if="{{j==3}}" class="playImage" mode = "aspectFit"src="../../images/mqz_icon_voicefeeds_wave2@2x.png"></image>
+          <image wx:if="{{j==4}}" class="playImage" mode = "aspectFit"src="../../images/mqz_icon_voicefeeds_wave3@2x.png"></image>
+        </view>
+       </button>
        <view class="voiceCountText">{{voiceSecond}}"</view>
    </view>
     <view wx:if="{{recordStatus}}" class="speak-style">

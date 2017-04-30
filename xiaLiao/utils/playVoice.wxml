@@ -1,0 +1,6 @@
+<template name="playVoice">
+  <view class="voiceButton" style="display:flex;flex-direction:row ;width:100px" >
+  <image  calss="imagePlay" mode="scaleToFit"  style="width:20px;height:20px" src=" ../../images/mqz_icon_voicefeeds_wave3@2x.png"></image>
+    <text>''</text>
+  </view>
+</template>
