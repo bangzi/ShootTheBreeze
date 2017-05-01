@@ -4,12 +4,22 @@
   <view wx:for="{{arr_res}}" wx:if="{{item.username!=null}}">
     <navigator url="{{url}}" class="home_cell">
       <view class="head">
-
         <image class="img" mode="aspectFill" src="{{logoImageUrl+item.icon}}" />
         <view class="text">
-          <text class="title">{{item.username}}</text>
-          <text class="subtitle">{{item.company}}</text>
+          <text class="title">发布时间</text>
+          <view wx:if="{{isPlayStatus}}" class="subtitle" catchtap="playButton">
+            <image wx:if="{{j==1}}"class="playImage" mode="aspectFit" src="../../images/mqz_icon_voicefeeds_wave0@2x.png"></image>
+            <image wx:if="{{j==2}}" class="playImage" mode="aspectFit" src="../../images/mqz_icon_voicefeeds_wave1@2x.png"></image>
+            <image wx:if="{{j==3}}" class="playImage" mode="aspectFit" src="../../images/mqz_icon_voicefeeds_wave2@2x.png"></image>
+            <image wx:if="{{j==4}}" class="playImage" mode="aspectFit" src="../../images/mqz_icon_voicefeeds_wave3@2x.png"></image>
+          </view>
+          <view class="subtitle" wx:if="{{!isPlayStatus}}" catchtap="playButton">
+
+            <import src="../../utils/playVoice.wxml" />
+            <template is="playVoice" />
+          </view>
         </view>
+        <view class="feedback"></view>
       </view>
       <view class="bottomLine"></view>
     </navigator>
