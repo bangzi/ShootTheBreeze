@@ -6,6 +6,7 @@ Page({
         arr_res: [],
         request_fail: false,
         isconcern:0,
+        isPlayStatus:false,
         url:"../../pages/voiceDetails/voiceDetails",
         logoImageUrl: app.globalData.globalImageUrl,
     },
@@ -92,6 +93,39 @@ Page({
                 })
             }
         })
+    },
+    playButton:function(e){
+          console.log("点击了哈哈哈");
+    speaking.call(this);
+    this.setData({
+      isPlayStatus: true
+    })
+    console.log(e);
     }
-
 })
+
+function speaking() {
+  var that = this;
+  //话筒帧动画
+  var i = 1;
+  this.timer = setInterval(function () {
+    i++;
+    i = i % 5;
+    that.setData({
+      j: i
+    })
+  }, 200)
+  }
+  function reading() {
+  var that = this;
+  //话筒帧动画
+  var i = 0;
+  this.timer = setInterval(function () {
+   
+    i = i % 5;
+     i++;
+    // that.setData({
+    //   j: i
+    // })
+  }, 200)
+  }

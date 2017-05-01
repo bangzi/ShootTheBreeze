@@ -9,6 +9,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 80px;
+  width: 100%;
   /*border-bottom: 1px solid #dadada;*/
 }
 
@@ -17,6 +18,10 @@
   height: 100rpx;
   margin-left: 20rpx;
   border-radius: 50%;
+}
+.playImage{
+  width: 20px;
+  height: 20px;
 }
 
 .text {
@@ -32,10 +37,9 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  height: 20px;
   margin-top: 10px;
-  
-  color: #999;
+ 
 }
 
 .concern {
@@ -71,4 +75,12 @@
 .text-request-fail {
   font-size: 18px;
   color: rgb(85, 85, 85);
+}
+.feedback{
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  margin-left: 90px;
+  margin-top: 45px;
 }

@@ -1,6 +1,6 @@
 <template name="playVoice">
-  <view class="voiceButton" style="display:flex;flex-direction:row ;width:100px" >
-  <image  calss="imagePlay" mode="scaleToFit"  style="width:20px;height:20px" src=" ../../images/mqz_icon_voicefeeds_wave3@2x.png"></image>
-    <text>''</text>
+  <view class="voiceButton" style="display:flex;flex-direction:row ;width:100px;height:25px;background-color: #dadada; " >
+  <image  calss="imagePlay" mode="aspectFit"  style="width:20px;height:20px;margin-left: 60px " src=" ../../images/mqz_icon_voicefeeds_wave3@2x.png"></image>
+    <text style="padding-left: 0px">''</text>
   </view>
 </template>
