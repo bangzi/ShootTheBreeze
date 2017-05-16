@@ -13,7 +13,7 @@
             <image wx:if="{{j==3}}" class="playImage" mode="aspectFit" src="../../images/mqz_icon_voicefeeds_wave2@2x.png"></image>
             <image wx:if="{{j==4}}" class="playImage" mode="aspectFit" src="../../images/mqz_icon_voicefeeds_wave3@2x.png"></image>
           </view>
-          <view class="subtitle" wx:if="{{!isPlayStatus}}" catchtap="playButton">
+          <view class="subtitle" wx:if="{{!isPlayStatus}}" catchtap="playButton" id="{{item.username}}">
 
             <import src="../../utils/playVoice.wxml" />
             <template is="playVoice" />

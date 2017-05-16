@@ -5,9 +5,9 @@ Page({
     data: {
         arr_res: [],
         request_fail: false,
-        isconcern:0,
-        isPlayStatus:false,
-        url:"../../pages/voiceDetails/voiceDetails",
+        isconcern: 0,
+        isPlayStatus: false,
+        url: "../../pages/voiceDetails/voiceDetails",
         logoImageUrl: app.globalData.globalImageUrl,
     },
     onLoad: function (options) {
@@ -15,10 +15,10 @@ Page({
         //     title:options.name
         // })
         wx.setNavigationBarTitle({
-          title: options.username+'的语音动态',
-          success: function(res) {
-            // success
-          }
+            title: options.username + '的语音动态',
+            success: function (res) {
+                // success
+            }
         })
         console.log(options.isconcern);
         console.log(options);
@@ -37,8 +37,8 @@ Page({
                 website: options.website,
                 wechatnumber: options.wechatnumber,
                 companylogo: options.companylogo,
-                cardid:options.cardid
-            },{
+                cardid: options.cardid
+            }, {
                 address: options.address,
                 company: options.company,
                 faxnumber: options.faxnumber,
@@ -48,13 +48,13 @@ Page({
                 profession: options.profession,
                 qqnumber: options.qqnumber,
                 telephonenumber: options.telephonenumber,
-                username: options.username,
+                username: 'hhh',
                 website: options.website,
                 wechatnumber: options.wechatnumber,
                 companylogo: options.companylogo,
-                cardid:options.cardid
+                cardid: options.cardid
             }],
-             isconcern:parseInt(options.isconcern)
+            isconcern: parseInt(options.isconcern)
         })
     },
     concernOther: function () {
@@ -94,38 +94,42 @@ Page({
             }
         })
     },
-    playButton:function(e){
-          console.log("点击了哈哈哈");
-    speaking.call(this);
-    this.setData({
-      isPlayStatus: true
-    })
-    console.log(e);
+    playButton: function (e) {
+        console.log("点击了哈哈哈");
+        var that=this;
+        if(e.currentTarget.id==this.data.arr_res[0].username){
+              speaking.call(this);
+        this.setData({
+            isPlayStatus: true
+        })
+        }
+      
+        console.log(e);
     }
 })
 
 function speaking() {
-  var that = this;
-  //话筒帧动画
-  var i = 1;
-  this.timer = setInterval(function () {
-    i++;
-    i = i % 5;
-    that.setData({
-      j: i
-    })
-  }, 200)
-  }
-  function reading() {
-  var that = this;
-  //话筒帧动画
-  var i = 0;
-  this.timer = setInterval(function () {
-   
-    i = i % 5;
-     i++;
-    // that.setData({
-    //   j: i
-    // })
-  }, 200)
-  }
+    var that = this;
+    //话筒帧动画
+    var i = 1;
+    this.timer = setInterval(function () {
+        i++;
+        i = i % 5;
+        that.setData({
+            j: i
+        })
+    }, 200)
+}
+function reading() {
+    var that = this;
+    //话筒帧动画
+    var i = 0;
+    this.timer = setInterval(function () {
+
+        i = i % 5;
+        i++;
+        // that.setData({
+        //   j: i
+        // })
+    }, 200)
+}
